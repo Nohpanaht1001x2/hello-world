@@ -4,13 +4,18 @@
 <!--  <input type="text" name="q" placeholder="password">-->
 <!--  <input type="button" name="q" value="Let's Gooo" routerLinkActive="">-->
 <!--</form>-->
-<form method="post">
+<form method="get">
   <input type="text" name="id" [(ngModel)]="id" placeholder="id">
   <input type="text" name="username" [(ngModel)]="username" placeholder="username" >
   <input type="text" name="password" [(ngModel)]="password" placeholder="password">
-  <input type="submit" (click)="handleRequest('POST')" name="button" value="Let's Gooo" routerLinkActive="">
+  <input type="submit" (click)="handleRequest('GET')" name="button" value="Let's Gooo" routerLinkActive="">
 <!--  <input type="button" name="button" value="Let's Gooo" routerLinkActive="">-->
 <!--  <button (click)="handleRequest('GET')">Send GET Request</button>-->
 <!--  <button (click)="handleRequest('POST')">Send POST Request</button>-->
 
+</form>
+<h1>Search Your Data</h1>
+<form method="get">
+  <input type="text" name="id" [(ngModel)]="id" placeholder="id">
+  <input type="submit" (click)="handleRequest('GET')" name="button" value="Let's Seeee" routerLinkActive="">
 </form>
