@@ -1,0 +1,19 @@
+form{
+  display: grid;
+  justify-content: center;
+}
+input{
+  font-size: inherit;
+  justify-content: center;
+  /*width: -webkit-fill-available;*/
+}
+input[type=button]{
+  padding: 0;
+  margin-inline-start: 27.5%;
+  width:45%;
+}
+
+::placeholder{
+  text-align: center;
+  padding-left: 10px;
+}
