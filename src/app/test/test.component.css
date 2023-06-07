@@ -1,19 +1,21 @@
-form{
-  display: grid;
-  justify-content: center;
-}
-input{
-  font-size: inherit;
-  justify-content: center;
-  /*width: -webkit-fill-available;*/
-}
-input[type=button]{
-  padding: 0;
-  margin-inline-start: 27.5%;
-  width:45%;
-}
+/*form{*/
+/*  display: grid;*/
+/*  justify-content: center;*/
+/*}*/
+/*input{*/
+/*  font-size: inherit;*/
+/*  justify-content: center;*/
+/*  !*width: -webkit-fill-available;*!*/
+/*}*/
+/*input[type=button]{*/
+/*  padding: 0;*/
+/*  margin-inline-start: 27.5%;*/
+/*  width:45%;*/
+/*}*/
 
-::placeholder{
-  text-align: center;
-  padding-left: 10px;
-}
+/*::placeholder{*/
+/*  text-align: center;*/
+/*  padding-left: 10px;*/
+/*}*/
+@import url("node_modules/purecss/build/pure.css");
+@import url("node_modules/purecss/build/forms.css");

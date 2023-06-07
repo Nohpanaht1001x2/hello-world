@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -11,6 +12,8 @@ import {HttpClientModule} from "@angular/common/http";
 // @ts-ignore
 import { TestComponent } from './test/test.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+
+import { fadeIn } from "./test/animated.module";
 
 const routes:Routes = [
   {path:"test",component:TestComponent},
@@ -23,17 +26,19 @@ const routes:Routes = [
     TestComponent,
     AppComponent,
     WelcomeComponent,
+
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     HttpClientModule,
-    FormsModule
-
+    FormsModule,
+    BrowserAnimationsModule,
   ],
   exports: [RouterModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+
 })
 export class AppModule { }
 

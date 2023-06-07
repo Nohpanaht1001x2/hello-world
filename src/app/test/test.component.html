@@ -4,18 +4,31 @@
 <!--  <input type="text" name="q" placeholder="password">-->
 <!--  <input type="button" name="q" value="Let's Gooo" routerLinkActive="">-->
 <!--</form>-->
-<form method="get">
+<form method="get" class="pure-form pure-form-stacked">
   <input type="text" name="id" [(ngModel)]="id" placeholder="id">
-  <input type="text" name="username" [(ngModel)]="username" placeholder="username" >
+  <input type="text" name="username" [(ngModel)]="username" placeholder="username">
   <input type="text" name="password" [(ngModel)]="password" placeholder="password">
-  <input type="submit" (click)="handleRequest('GET')" name="button" value="Let's Gooo" routerLinkActive="">
-<!--  <input type="button" name="button" value="Let's Gooo" routerLinkActive="">-->
-<!--  <button (click)="handleRequest('GET')">Send GET Request</button>-->
-<!--  <button (click)="handleRequest('POST')">Send POST Request</button>-->
+  <input type="submit" class="pure-button pure-button-primary" (click)="handleRequest('GET')" name="submitbutton"
+         value="Let's Gooo" routerLinkActive="">
+  <!--  <input type="button" name="button" value="Let's Gooo" routerLinkActive="">-->
+  <!--  <button (click)="handleRequest('GET')">Send GET Request</button>-->
+  <!--  <button (click)="handleRequest('POST')">Send POST Request</button>-->
 
 </form>
-<h1>Search Your Data</h1>
-<form method="get">
-  <input type="text" name="id" [(ngModel)]="id" placeholder="id">
-  <input type="submit" (click)="handleRequest('GET')" name="button" value="Let's Seeee" routerLinkActive="">
-</form>
+<div class="pure-u-2-3">
+  <h1>Search Your Data</h1>
+  <form method="get" class="pure-form-stacked pure-form">
+    <input type="text" class="e-box" style="width:{{idwidth}};" name="id" [(ngModel)]="id" placeholder="id"
+           (mouseover)="idwidth = ''"
+           (mouseleave)="idwidth = 'inherit'">
+<!--    <div class="e-box" >-->
+
+      <input type="submit"
+             class="e-btn centered success {{color}}"
+             (blur)="this.color = 'text-white'"
+             (click)="handleRequest('GET');this.color = 'text-danger'" name="searchbutton"
+             value="Let's Seeee" routerLinkActive="">
+<!--    </div>-->
+  </form>
+
+</div>

@@ -1,4 +1,7 @@
-<a routerLink="test" routerLinkActive="active">test</a>
-<br>
-<a routerLink="welcome" routerLinkActive="active">welcome</a>
-<router-outlet></router-outlet>
+<a class="pure-menu-link" routerLink="test" routerLinkActive="active">test</a>
+<br class="">
+<a class="pure-menu-link" routerLink="welcome" routerLinkActive="active">welcome</a>
+<div [@fadeInframe]="state"
+     (mouseover)="hoverController()">
+  <router-outlet></router-outlet>
+</div>
